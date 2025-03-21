@@ -1,0 +1,278 @@
+.container {
+    width: 100vw;  /* Chiếm toàn bộ chiều rộng màn hình */
+    font-family: 'Times New Roman', Times, serif;
+    margin: 0;
+    padding: 0;
+    background-color: #151b26;
+    color: white;
+}
+
+.quangcao {
+    height: 60px;
+    margin-top: 50px;
+    background-color: #151b26;
+}
+
+.quangcaochuchay {
+    color: white;
+    font-size: 35px;
+    text-align: center;
+    align-items: center;
+}
+
+.nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #151b26;
+    color: white;
+    height: 80px;
+    padding-left: 40px;
+    padding-right: 40px;
+    width: 100%;
+}
+
+.navleft, .navright {
+    display: flex;
+}
+
+.navleft a, .navright a {
+    font-size: 22px;
+    padding: 30px;
+    text-decoration: none;    
+    color: white;
+    text-align: center;
+}
+
+.navleft a:hover, .navright a:hover {
+    background-color: #CCFFFF;
+    transition: .3s ease-in-out;
+    overflow: visible;
+    color: black;
+}
+
+.logongoctech {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+}
+
+/* Hiệu ứng nhấp nháy */
+@keyframes blink {
+    0% { opacity: 1; } 
+    50% { opacity: 0.3; } 
+    100% { opacity: 1; } 
+}
+
+.content {
+    font-size: 25px;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+.gioithieuadmin {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 20px;
+}
+
+.trinhdohocvan {
+    width: 45%;
+    margin-top: 20px;
+    text-align: center;
+}
+
+.anhadmin {
+    width: 45%;
+    text-align: center;
+}
+
+.ngoctech {
+    font-size: 25px;
+}
+
+.hinhngoctech {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+}
+
+/* ==== Link Section ==== */
+.link {
+    display: flex;
+    align-items: center; 
+    justify-content: center; 
+    gap: 20px;  
+    flex-wrap: wrap; 
+    padding: 20px;
+}
+
+.link a {
+    text-decoration: none;
+    color: white;
+    font-size: 24px;
+    padding: 12px 25px;
+    border-radius: 10px;
+    display: flex; 
+    align-items: center; 
+    justify-content: center;
+    gap: 10px;
+    background-color: rgba(255, 255, 255, 0.1);
+    transition: all 0.3s ease-in-out;
+}
+
+.link a:hover {
+    background-color: rgb(122, 137, 99);
+    color: black;
+}
+
+/* Nhấp nháy ảnh */
+.blinking-img {
+    width: 200px; 
+    animation: blink 4s infinite; 
+}
+
+/* ==== Dịch Vụ ==== */
+.service-container {
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    color: black;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.service-logo {
+    width: 50px;
+    height: 50px;
+    margin-right: 10px;
+}
+
+ul {
+    background-color: white;
+    padding: 15px;
+    color: black;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    list-style: none;
+}
+
+li {
+    background-color: white;
+    color: black;
+    padding: 10px;
+    margin-bottom: 5px;
+    border-radius: 5px;
+    border-left: 5px solid #007bff;
+}
+
+/* ==== Footer ==== */
+.footer {
+    background-color: #222;
+    color: #fff;
+    text-align: center;
+    padding: 20px;
+    margin-top: 20px;
+    width: 100%;
+}
+
+.footer-content {
+    width: 100%;
+}
+
+.thank-you {
+    font-size: 25px;
+    font-weight: bold;
+}
+
+.contact-info {
+    font-size: 20px;
+    margin-top: 5px;
+}
+
+/* ==== Responsive Design ==== */
+
+/* Laptop */
+@media (min-width: 1200px) {
+    .container {
+        width: 100vw;
+    }
+    .gioithieuadmin {
+        gap: 100px;
+    }
+}
+
+/* Tablet */
+@media (max-width: 768px) {
+    .nav {
+        flex-direction: column;
+        height: auto;
+        padding: 10px;
+    }
+
+    .navleft, .navright {
+        text-align: center;
+        flex-direction: column;
+    }
+
+    .navright a {
+        display: block;
+        padding: 10px;
+    }
+
+    .gioithieuadmin {
+        flex-direction: column;
+        gap: 20px;
+        text-align: center;
+    }
+
+    .trinhdohocvan, .anhadmin {
+        width: 100%;
+    }
+
+    .link {
+        flex-wrap: wrap;
+        gap: 15px;
+    }
+
+    .link a {
+        font-size: 26px;
+        padding: 15px 30px;
+    }
+}
+
+/* Điện thoại nhỏ */
+@media (max-width: 480px) {
+    .container {
+        width: 100vw;
+    }
+
+    .gioithieuadmin {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .quangcaochuchay {
+        font-size: 32px; 
+    }
+
+    .hinhngoctech {
+        width: 250px;
+        height: 250px;
+    }
+
+    .link {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .link a {
+        font-size: 22px;
+        padding: 12px 20px; 
+    }
+}
