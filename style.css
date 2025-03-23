@@ -213,16 +213,23 @@ li {
         flex-direction: column;
         height: auto;
         padding: 10px;
-    }
-
-    .navleft, .navright {
+        align-items: center; /* Căn giữa nội dung trong nav */
         text-align: center;
+    }
+   
+    .navleft, .navright {
+        display: flex;
+        justify-content: center; /* Căn giữa theo chiều ngang */
+        align-items: center; /* Căn giữa theo chiều dọc */
         flex-direction: column;
+        width: 100%; /* Chiếm toàn bộ chiều rộng để đảm bảo thẳng hàng */
+       
     }
 
-    .navright a {
+    .navleft a, .navright a {
         display: block;
         padding: 10px;
+        width: 100%; /* Đảm bảo các mục trong nav được căn đều */
     }
 
     .gioithieuadmin {
@@ -244,7 +251,11 @@ li {
         font-size: 26px;
         padding: 15px 30px;
     }
+    .tenad{
+        font-size: 28px;
+    }
 }
+
 
 /* Điện thoại nhỏ */
 @media (max-width: 480px) {
@@ -263,7 +274,7 @@ li {
 
     .hinhngoctech {
         width: 250px;
-        height: 250px;
+        height: 350px;
     }
 
     .link {
